@@ -76,7 +76,7 @@ def rotate_box(obj,axes) :
     for i in range(len(axes)):
         obj.rotate(angle=obj.omega[i]*dt, axis=norm(axes[i].axis), origin=obj.pos)
 
-def update_axis(List,w): #rotating the vectors and adjusting length to be proportional to angular momentum
+def update_axis(List,w): 
     old = List
     for i in range(len(List)):
         k = 0
