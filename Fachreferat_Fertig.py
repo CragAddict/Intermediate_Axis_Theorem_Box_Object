@@ -35,7 +35,7 @@ xvec = arrow(pos=(10,0,0), length=(Ixx*box.omega.x)/5, axis=basis_vectors[0], sh
 yvec = arrow(pos=(10+xvec.length,0,0), length=(2*Ixx*box.omega.y)/5, axis=basis_vectors[1], shaftwidth=.1, color=color.green, opacity=.7)
 zvec = arrow(pos=(10+xvec.length,yvec.length,0), length=(Ixx*box.omega.z)/5, axis=basis_vectors[2], shaftwidth=.1, color=color.blue, opacity=.7)
 
-totvec = arrow(pos=(10,0,0), length=sqrt(xvec.length*xvec.length+yvec.length*yvec.length+zvec.length*zvec.length), axis=norm((xvec.length,yvec.length,zvec.length)), shaftwidth=.2, color=color.red)
+totvec = arrow(pos=(10,0,0), length=sqrt(xvec.length*xvec.length+yvec.length*yvec.length+zvec.length*zvec.length), axis=norm((xvec.length,yvec.length,zvec.length)), shaftwidth=.2, color=color.orange)
 
 vector_List = [] 
 vector_List.append(xvec)
@@ -46,10 +46,10 @@ vector_List.append(totvec)
 
 graph1 = gdisplay(title = 'Angular Momenta and Energy vs. Time',x=200,y=450,height = 325)
 
-p_x = gcurve(gdisplay = graph1,color=color.red)
+p_x = gcurve(gdisplay = graph1,color=color.yellow)
 p_y = gcurve(gdisplay = graph1,color=color.green)
 p_z = gcurve(gdisplay = graph1,color=color.blue)
-p_tot = gcurve(gdisplay = graph1,color=color.yellow)
+p_tot = gcurve(gdisplay = graph1,color=color.orange)
 E_tot = gcurve(gdisplay = graph1,color=color.white)
 
 plot_List = [] 
